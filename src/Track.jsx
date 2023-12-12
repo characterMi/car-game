@@ -8,12 +8,12 @@ import { Ramp } from "./Ramp";
 const Track = () => {
   const result = useLoader(
     GLTFLoader,
-    process.env.PUBLIC_URL + "/car-game/models/track.glb"
+    process.env.PUBLIC_URL + "/models/track.glb"
   );
 
   const colorMap = useLoader(
     TextureLoader,
-    process.env.PUBLIC_URL + "/car-game/textures/track.png"
+    process.env.PUBLIC_URL + "/textures/track.png"
   );
 
   useEffect(() => {

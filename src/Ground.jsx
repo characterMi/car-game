@@ -18,17 +18,17 @@ const Ground = () => {
 
   const gridMap = useLoader(
     TextureLoader,
-    process.env.PUBLIC_URL + "/car-game/textures/grid.png"
+    process.env.PUBLIC_URL + "/textures/grid.png"
   );
 
   const aoMap = useLoader(
     TextureLoader,
-    process.env.PUBLIC_URL + "/car-game/textures/ground-ao.png"
+    process.env.PUBLIC_URL + "/textures/ground-ao.png"
   );
 
   const alphaMap = useLoader(
     TextureLoader,
-    process.env.PUBLIC_URL + "/car-game/textures/alpha-map.png"
+    process.env.PUBLIC_URL + "/textures/alpha-map.png"
   );
 
   useEffect(() => {

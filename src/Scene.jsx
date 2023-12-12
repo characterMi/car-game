@@ -31,7 +31,7 @@ export function Scene() {
   return (
     <Suspense fallback={<Loader />}>
       <Environment
-        files={process.env.PUBLIC_URL + "/car-game/textures/envmap.hdr"}
+        files={process.env.PUBLIC_URL + "/textures/envmap.hdr"}
         background={"both"}
       />
 
