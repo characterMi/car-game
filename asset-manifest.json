@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/car-game/static/css/main.7d925df8.css",
-    "main.js": "/car-game/static/js/main.e7aa70ad.js",
+    "main.css": "/car-game/static/css/main.1229279b.css",
+    "main.js": "/car-game/static/js/main.5a5da522.js",
     "index.html": "/car-game/index.html",
-    "main.7d925df8.css.map": "/car-game/static/css/main.7d925df8.css.map",
-    "main.e7aa70ad.js.map": "/car-game/static/js/main.e7aa70ad.js.map"
+    "main.1229279b.css.map": "/car-game/static/css/main.1229279b.css.map",
+    "main.5a5da522.js.map": "/car-game/static/js/main.5a5da522.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d925df8.css",
-    "static/js/main.e7aa70ad.js"
+    "static/css/main.1229279b.css",
+    "static/js/main.5a5da522.js"
   ]
 }

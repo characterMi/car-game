@@ -7,6 +7,7 @@
   "theme_color": "#d14200",
   "scope": ".",
   "display": "fullscreen",
+  "display_override": ["window-controls-overlay"],
   "icons": [
     {
       "src": "/car-game/icons/car-game-512.png",

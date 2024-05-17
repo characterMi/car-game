@@ -8,6 +8,8 @@ const assets = [
   "/car-game/icons/reset.svg",
   "/car-game/icons/rotate.svg",
   "/car-game/icons/swap-camera.svg",
+  "/car-game/images/car-game_first.png",
+  "/car-game/images/car-game_responsive.png",
   "/car-game/models/car.glb",
   "/car-game/models/ramp.glb",
   "/car-game/models/track.glb",
@@ -16,10 +18,10 @@ const assets = [
   "/car-game/textures/ground-ao.png",
   "/car-game/textures/track.png",
   "/car-game/textures/envmap.hdr",
-  "/car-game/static/css/main.7d925df8.css",
-  "/car-game/static/css/main.7d925df8.css.map",
-  "/car-game/static/js/main.e7aa70ad.js",
-  "/car-game/static/js/main.e7aa70ad.js.map",
+  "/car-game/static/css/main.1229279b.css",
+  "/car-game/static/js/main.5a5da522.js",
+  "/car-game/static/css/main.1229279b.css.map",
+  "/car-game/static/js/main.5a5da522.js.map",
 ];
 
 self.addEventListener("install", (e) => {
