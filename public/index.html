@@ -2,11 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#d14200" />
+    <link rel="icon" href="/car-game/icons/icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/car-game/icons/car-game-192.png" />
+    <meta
+      name="description"
+      content="a Car race Game with a User friendly design and a tons of Features and Utilities."
+    />
+
+    <link rel="manifest" href="/car-game/app.webmanifest" />
     <title>Car Game</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <main id="root"></main>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/car-game/serviceWorker.js")
+            .then((res) => {
+              console.log("Serviceworker Started.");
+            })
+            .catch((error) => console.error("an Error has been occurred!"));
+        });
+      }
+    </script>
   </body>
 </html>

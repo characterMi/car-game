@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# 🏎️ Car game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### This game offers a captivating and dynamic visual experience for users, and thanks to its responsive design, it runs smoothly on all devices. In this game, you enter a meticulously designed 3D world. The use of three.js allows you to create complex 3D models and realistic environments, while react-three-fiber helps you seamlessly integrate these elements into a React environment. One of the standout features of this game is its responsiveness. No matter whether you are using a smartphone, tablet, or personal computer, you can enjoy the game. The responsive design ensures that the game's graphical elements and user interface automatically adjust to the size of your screen, providing an optimized and enjoyable gaming experience at all times. This game is not only visually stunning but also technically advanced. The combination of three.js and react-three-fiber allows developers to leverage the strengths of both technologies to create a dynamic and engaging 3D game that also performs well. Overall, this game is a great example of how modern web technologies can be used to create exciting and immersive gaming experiences.
 
-## Available Scripts
+## Link 🔗 [https://charactermi.github.io/car-game](https://charactermi.github.io/car-game)
 
-In the project directory, you can run:
+<br />
 
-### `npm start`
+# Preview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img src="./preview_images/car-game_first.png" alt="first" />
+<img src="./preview_images/car-game_second.png" alt="second" />
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br />
 
-### `npm test`
+# Mobile Responsive
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src="./preview_images/car-game_responsive.png" alt="responsive" />
 
-### `npm run build`
+# Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<ul>
+    <li>
+        <img src="https://github.com/characterMi/characterMi/raw/main/images/technologies/icons8-html.svg" alt="HTML" />
+    </li>
+    <li>
+        <img src="https://github.com/characterMi/characterMi/raw/main/images/technologies/icons8-css.svg" alt="Css" />
+    </li>
+    <li>
+        <img src="https://github.com/characterMi/characterMi/raw/main/images/technologies/icons8-js.svg" alt="Js" />
+    </li>
+    <li>
+        <img src="https://github.com/characterMi/characterMi/raw/main/images/technologies/icons8-react-native.svg" width="46" height="46" alt="React" />
+    </li>
+    <li>
+        <img src="https://github.com/characterMi/characterMi/blob/main/images/technologies/threeJs-icon.png" width="46" height="46" alt="Three.js" />
+    </li>
+    <li>
+        <img src="https://github.com/characterMi/characterMi/raw/main/images/technologies/pwa.png" width="46" height="16" alt="PWA" />
+    </li>
+</ul>

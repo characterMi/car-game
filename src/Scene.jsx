@@ -1,9 +1,9 @@
 import {
   Environment,
+  Html,
   OrbitControls,
   PerspectiveCamera,
   useProgress,
-  Html,
 } from "@react-three/drei";
 import { Suspense, useEffect, useState } from "react";
 import { Car } from "./Car";
@@ -15,6 +15,8 @@ export function Scene() {
   const [cameraPosition, setCameraPosition] = useState([-6, 3.9, 6.21]);
 
   useEffect(() => {
+    const swapCamera = document.querySelector(".control-swap");
+
     function keydownHandler(e) {
       if (e.key === "k") {
         // random is necessary to trigger a state change
@@ -24,8 +26,14 @@ export function Scene() {
       }
     }
 
+    const clickHandler = () => keydownHandler({ key: "k" })
+
     window.addEventListener("keydown", keydownHandler);
-    return () => window.removeEventListener("keydown", keydownHandler);
+    swapCamera.addEventListener("click", clickHandler);
+    return () => {
+      window.removeEventListener("keydown", keydownHandler);
+      swapCamera.removeEventListener("click", clickHandler);
+    }
   }, [thirdPerson]);
 
   return (
