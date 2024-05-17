@@ -18,7 +18,7 @@ const assets = [
   "/car-game/textures/envmap.hdr",
 ];
 
-// add index.js and index.css
+// add index.js and index.css, add screenshots
 
 self.addEventListener("install", (e) => {
   e.waitUntil(

@@ -11,6 +11,20 @@ html,
   font-family: monospace;
 }
 
+.loader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background: white;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .menu-btn {
   background: #000000b7;
   width: 50px;

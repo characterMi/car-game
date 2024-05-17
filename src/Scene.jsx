@@ -26,15 +26,27 @@ export function Scene() {
       }
     }
 
-    const clickHandler = () => keydownHandler({ key: "k" })
+    const clickHandler = () => keydownHandler({ key: "k" });
 
     window.addEventListener("keydown", keydownHandler);
     swapCamera.addEventListener("click", clickHandler);
+
     return () => {
       window.removeEventListener("keydown", keydownHandler);
       swapCamera.removeEventListener("click", clickHandler);
     }
   }, [thirdPerson]);
+
+  useEffect(() => {
+    const allImages = document.querySelectorAll("img");
+
+    const handleContextMenu = (event) => event.preventDefault();
+
+    allImages.forEach(img => img.addEventListener("contextmenu", handleContextMenu));
+    return () => {
+      allImages.forEach(img => img.removeEventListener("contextmenu", handleContextMenu));
+    }
+  }, [])
 
   return (
     <Suspense fallback={<Loader />}>
@@ -57,7 +69,9 @@ const Loader = () => {
   const { progress } = useProgress();
   return (
     <Html>
-      <span>{progress.toFixed(2)}%</span>
+      <section className="loader">
+        Loading... <span>{progress.toFixed(2)}%</span>
+      </section>
     </Html>
   );
 };
