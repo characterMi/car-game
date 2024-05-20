@@ -16,13 +16,10 @@ const assets = [
   "/car-game/textures/ground-ao.png",
   "/car-game/textures/track.png",
   "/car-game/textures/envmap.hdr",
-  "/car-game/static/css/main.50367af0.css",
+  "/car-game/static/css/main.1229279b.css",
+  "/car-game/static/css/main.1229279b.css.map",
   "/car-game/static/js/main.5a5da522.js",
-  "/car-game/static/css/main.50367af0.css.map",
   "/car-game/static/js/main.5a5da522.js.map",
-  "/car-game/images/car-game_first.png",
-  "/car-game/images/car-game_responsive.png",
-  "/car-game/app.webmanifest",
 ];
 
 self.addEventListener("install", (e) => {
