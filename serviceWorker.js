@@ -16,11 +16,13 @@ const assets = [
   "/car-game/textures/ground-ao.png",
   "/car-game/textures/track.png",
   "/car-game/textures/envmap.hdr",
-  "/car-game/static/css/main.1229279b.css",
-  "/car-game/static/css/main.1229279b.css.map",
+  "/car-game/static/css/main.b09068b9.css",
   "/car-game/static/js/main.5a5da522.js",
+  "/car-game/static/css/main.b09068b9.css.map",
   "/car-game/static/js/main.5a5da522.js.map",
 ];
+
+// add index.js and index.css
 
 self.addEventListener("install", (e) => {
   e.waitUntil(
@@ -30,18 +32,31 @@ self.addEventListener("install", (e) => {
   );
 });
 
-self.addEventListener("fetch", (e) => {
-  e.respondWith(
-    caches.match(e.request).then((response) => {
-      const fetchPromise = fetch(e.request).then((networkResponse) => {
-        caches.open("assets").then((cache) => {
-          cache.put(e.request, networkResponse.clone());
+self.addEventListener("fetch", (event) => {
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      // Even if the response is in the cache, we fetch it
+      // and update the cache for future usage
+      const fetchPromise = fetch(event.request)
+        .then((networkResponse) => {
+          return caches.open("assets").then((cache) => {
+            cache.put(event.request, networkResponse.clone());
+            return networkResponse;
+          });
+        })
+        .catch((e) => {
+          console.error(e);
 
-          return networkResponse;
+          return new Response(
+            "Network error and no cached data available. see the browser's console for more information",
+            {
+              status: 503,
+              statusText: "Service Unavailable.",
+            }
+          );
         });
-      });
-
-      return response || fetchPromise;
+      // We use the currently cached version if it's there
+      return response || fetchPromise; // cached or a network fetch
     })
   );
 });
