@@ -18,28 +18,47 @@ const assets = [
   "/car-game/textures/envmap.hdr",
 ];
 
-// add index.js and index.css, add screenshots
+// add index.js and index.css
 
 self.addEventListener("install", (e) => {
   e.waitUntil(
-    caches.open("assets").then((cache) => {
+    caches.open("car-game").then((cache) => {
       cache.addAll(assets);
     })
   );
 });
 
-self.addEventListener("fetch", (e) => {
-  e.respondWith(
-    caches.match(e.request).then((response) => {
-      const fetchPromise = fetch(e.request).then((networkResponse) => {
-        caches.open("assets").then((cache) => {
-          cache.put(e.request, networkResponse.clone());
+self.addEventListener("fetch", (event) => {
+  event.respondWith(
+    caches
+      .match(event.request) // searching in the cache
+      .then((response) => {
+        if (response) {
+          // The request is in the cache
+          return response; // cache hit
+        } else {
+          // We need to go to the network
+          const fetchPromise = fetch(event.request)
+            .then((networkResponse) => {
+              return caches.open("car-game").then((cache) => {
+                cache.put(event.request, networkResponse.clone());
+                return networkResponse;
+              });
+            })
+            .catch((e) => {
+              console.error(e);
 
-          return networkResponse;
-        });
-      });
+              return new Response(
+                "Network error and no cached data available. see the browser's console for more information",
+                {
+                  status: 503,
+                  statusText: "Service Unavailable.",
+                }
+              );
+            });
 
-      return response || fetchPromise;
-    })
+          return fetchPromise; // cache miss
+        }
+      })
   );
 });

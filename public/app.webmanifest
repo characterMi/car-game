@@ -1,4 +1,5 @@
 {
+  "id": "/car-game/",
   "name": "Car Game",
   "short_name": "Car Game",
   "description": "a Car race Game with a User friendly design and a tons of Features and Utilities.",
@@ -7,7 +8,6 @@
   "theme_color": "#d14200",
   "scope": ".",
   "display": "fullscreen",
-  "display_override": ["window-controls-overlay"],
   "icons": [
     {
       "src": "/car-game/icons/car-game-512.png",
