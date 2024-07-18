@@ -4,7 +4,7 @@
   "short_name": "Car Game",
   "description": "a Car race Game with a User friendly design and a tons of Features and Utilities.",
   "start_url": ".",
-  "orientation": "any",
+  "orientation": "landscape",
   "theme_color": "#d14200",
   "scope": ".",
   "display": "fullscreen",
@@ -12,14 +12,12 @@
     {
       "src": "/car-game/icons/car-game-512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
+      "type": "image/png"
     },
     {
       "src": "/car-game/icons/car-game-192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
+      "type": "image/png"
     }
   ],
   "background_color": "#ffffff",
