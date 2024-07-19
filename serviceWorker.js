@@ -1,5 +1,5 @@
 const assets = [
-  "/car-game",
+  "/car-game/",
   "/car-game/icons/arrow.svg",
   "/car-game/icons/download.svg",
   "/car-game/icons/gas-pedal.svg",
