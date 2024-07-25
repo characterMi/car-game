@@ -1,31 +1,66 @@
+const Arrow = ({ dir }) => (
+    <svg
+        version="1.0"
+        xmlns="http://www.w3.org/2000/svg"
+        width="100px"
+        height="100px"
+        viewBox="0 0 300.000000 248.000000"
+        preserveAspectRatio="xMidYMid meet"
+        className={`${dir === "left" ? "control-l" : "control-r"} control-btn arrows`}
+        style={{
+            transform: dir === "left" ? "rotateZ(180deg)" : "none",
+        }}
+    >
+        <g transform="translate(0.000000,248.000000) scale(0.100000,-0.100000)" fill="#ffffff" stroke="none">
+            <path d="M1662 1818 c-8 -8 -12 -58 -12 -160 l0 -148 -580 0 c-562 0 -580 -1 -590 -19 -15 -29 -14 -583 2 -599 9 -9 154 -12 590 -12 l578 0 0 -149 c0 -123 3 -152 16 -165 8 -9 21 -16 27 -16 19 0 821 609 831 631 7 16 4 25 -15 43 -57 55 -799 606 -816 606 -11 0 -24 -5 -31 -12z" />
+        </g>
+    </svg>
+);
+
 const Controls = () => (
     <section className="controls">
         <div className="raw">
-            <img
-                src={process.env.PUBLIC_URL + "/icons/arrow.svg"}
-                alt="Arrow"
-                className="control-l control-btn arrows"
-                style={{
-                    transform: "rotateZ(180deg)",
-                }}
-            />
-            <img
-                src={process.env.PUBLIC_URL + "/icons/arrow.svg"}
-                alt="Arrow"
-                className="control-r control-btn arrows"
-            />
+            <Arrow dir="left" />
+
+            <Arrow />
         </div>
         <div className="raw">
-            <img
-                src={process.env.PUBLIC_URL + "/icons/stop-pedal.svg"}
-                alt="Pedal"
+            <svg
+                version="1.0"
+                xmlns="http://www.w3.org/2000/svg"
+                width="100px"
+                height="100px"
+                viewBox="0 0 200.000000 200.000000"
+                preserveAspectRatio="xMidYMid meet"
                 className="control-b control-btn"
-            />
-            <img
-                src={process.env.PUBLIC_URL + "/icons/gas-pedal.svg"}
-                alt="Pedal"
+            >
+                <g transform="translate(0.000000,200.000000) scale(0.050000,-0.050000)" fill="#ffffff" stroke="none">
+                    <path d="M850 3264 c-475 -165 -609 -442 -610 -1252 0 -651 42 -828 252 -1052 240 -257 362 -279 1509 -280 1142 0 1250 18 1491 256 229 225 268 381 268 1064 0 793 -96 1029 -498 1226 l-132 64 -1090 5 c-994 4 -1099 1 -1190 -31z m2214 -305 c120 -33 239 -138 306 -268 l60 -118 0 -573 0 -573 -60 -118 c-146 -285 -165 -289 -1380 -289 l-1000 0 -100 48 c-279 132 -309 223 -309 932 -1 709 33 809 319 938 103 47 2005 65 2164 21z" />
+                    <path d="M840 2010 l0 -650 165 0 165 0 0 650 0 650 -165 0 -165 0 0 -650z" />
+                    <path d="M1340 2010 l0 -650 160 0 160 0 0 650 0 650 -160 0 -160 0 0 -650z" />
+                    <path d="M1840 2010 l0 -650 160 0 160 0 0 650 0 650 -160 0 -160 0 0 -650z" />
+                    <path d="M2310 2010 l0 -650 165 0 165 0 0 650 0 650 -165 0 -165 0 0 -650z" />
+                    <path d="M2800 2010 l0 -650 170 0 170 0 0 650 0 650 -170 0 -170 0 0 -650z" />
+                </g>
+            </svg>
+
+            <svg
+                version="1.0"
+                xmlns="http://www.w3.org/2000/svg"
+                width="100px"
+                height="100px"
+                viewBox="0 0 200.000000 200.000000"
+                preserveAspectRatio="xMidYMid meet"
                 className="control-f control-btn"
-            />
+            >
+                <g transform="translate(0.000000,200.000000) scale(0.050000,-0.050000)" fill="#ffffff" stroke="none">
+                    <path d="M1060 3608 c-228 -99 -280 -233 -279 -728 0 -491 -1 -488 294 -767 425 -401 385 -302 385 -956 0 -738 69 -817 710 -817 357 0 468 25 577 131 143 138 134 42 128 1537 l-5 1348 -63 87 c-38 52 -104 109 -167 142 l-105 55 -702 -1 c-583 0 -715 -6 -773 -31z m1470 -197 c156 -65 150 -5 150 -1417 0 -1574 50 -1434 -510 -1434 -526 0 -510 -21 -510 687 l0 508 -55 100 c-35 65 -149 188 -321 347 -308 286 -289 241 -292 695 -3 562 -32 543 834 543 508 0 649 -6 704 -29z" />
+                    <path d="M1270 3252 c-256 -114 -228 -497 42 -570 155 -42 329 53 368 200 69 253 -176 474 -410 370z m207 -270 c12 -85 -93 -138 -153 -78 -70 70 23 202 105 148 23 -14 44 -46 48 -70z" />
+                    <path d="M2150 3249 c-262 -137 -229 -494 53 -570 275 -74 486 264 302 483 -94 112 -239 147 -355 87z m206 -238 c41 -90 -83 -176 -152 -107 -37 37 -28 111 17 143 53 37 108 22 135 -36z" />
+                    <path d="M2150 2332 c-256 -114 -229 -483 42 -573 159 -52 349 68 378 239 40 239 -201 431 -420 334z m173 -197 c74 -59 41 -175 -50 -175 -95 0 -128 113 -49 169 54 37 60 38 99 6z" />
+                    <path d="M2186 1438 c-210 -61 -282 -342 -130 -503 199 -211 563 -24 514 265 -29 174 -213 288 -384 238z m161 -239 c35 -51 21 -113 -31 -141 -85 -45 -181 89 -112 158 37 37 111 28 143 -17z" />
+                </g>
+            </svg>
         </div>
     </section>
 )

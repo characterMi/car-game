@@ -77,10 +77,6 @@ html,
   transition: all 200ms ease-in-out;
 }
 
-.utility-container .utilities img {
-  height: 40px;
-}
-
 .utility-container .utilities p {
   font-size: 16px;
 }

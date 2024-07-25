@@ -37,17 +37,6 @@ export function Scene() {
     }
   }, [thirdPerson]);
 
-  useEffect(() => {
-    const allImages = document.querySelectorAll("img");
-
-    const handleContextMenu = (event) => event.preventDefault();
-
-    allImages.forEach(img => img.addEventListener("contextmenu", handleContextMenu));
-    return () => {
-      allImages.forEach(img => img.removeEventListener("contextmenu", handleContextMenu));
-    }
-  }, [])
-
   return (
     <Suspense fallback={<Loader />}>
       <Environment
