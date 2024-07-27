@@ -9,9 +9,9 @@ const assets = [
   "/car-game/textures/track.png",
   "/car-game/textures/envmap.hdr",
   "/car-game/static/css/main.d007a91b.css",
-  "/car-game/static/js/main.6e7ca1de.js",
+  "/car-game/static/js/main.bb5785d0.js",
   "/car-game/static/css/main.d007a91b.css.map",
-  "/car-game/static/js/main.6e7ca1de.js.map",
+  "/car-game/static/js/main.bb5785d0.js.map",
 ];
 
 self.addEventListener("install", (e) => {
