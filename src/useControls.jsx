@@ -19,7 +19,7 @@ export const useControls = (vehicleApi, chassisApi) => {
     };
 
     const handleKeyTouchStart = (e) => {
-      const targetClassName = e.target.classList[0];
+      const targetClassName = e.currentTarget.classList[0];
 
       switch (targetClassName) {
         case "control-f":
@@ -44,7 +44,7 @@ export const useControls = (vehicleApi, chassisApi) => {
     }
 
     const handleKeyTouchEnd = (e) => {
-      const targetClassName = e.target.classList[0];
+      const targetClassName = e.currentTarget.classList[0];
 
       switch (targetClassName) {
         case "control-f":
@@ -69,13 +69,7 @@ export const useControls = (vehicleApi, chassisApi) => {
     }
 
     const handleClickUtility = (e) => {
-      let targetClassName;
-
-      if (e.target.nodeName === "DIV") {
-        targetClassName = e.target.classList[0]
-      } else {
-        targetClassName = e.target.parentElement.classList[0]
-      }
+      const targetClassName = e.currentTarget.classList[0];
 
       switch (targetClassName) {
         case "control-rotate":
