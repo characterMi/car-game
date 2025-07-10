@@ -8,7 +8,12 @@ html,
   -webkit-tap-highlight-color: transparent;
   user-select: none;
   -webkit-user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+  touch-callout: none;
+  -webkit-touch-callout: none;
   font-family: monospace;
+  overscroll-behavior: none;
 }
 
 .loader {

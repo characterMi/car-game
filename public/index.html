@@ -22,16 +22,9 @@
     <main id="root"></main>
 
     <script>
-      window.addEventListener("load", () => {
-        if ("serviceWorker" in navigator) {
-          navigator.serviceWorker
-            .register("/car-game/serviceWorker.js")
-            .then((res) => {
-              console.log("Serviceworker Started.");
-            })
-            .catch((error) => console.error("an Error has been occurred!"));
-        }
-      });
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/car-game/serviceWorker.js");
+      }
     </script>
   </body>
 </html>
