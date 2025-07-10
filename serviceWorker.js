@@ -8,11 +8,16 @@ const assets = [
   "/car-game/textures/ground-ao.png",
   "/car-game/textures/track.png",
   "/car-game/textures/envmap.hdr",
-  "/car-game/static/css/main.d007a91b.css",
+  "/car-game/static/css/main.40b5f63e.css",
   "/car-game/static/js/main.bb5785d0.js",
-  "/car-game/static/css/main.d007a91b.css.map",
+  "/car-game/static/css/main.40b5f63e.css.map",
   "/car-game/static/js/main.bb5785d0.js.map",
+  "/car-game/icons/icon.png",
+  "/car-game/icons/car-game-192.png",
+  "/car-game/app.webmanifest",
 ];
+
+// add index.js and index.css
 
 self.addEventListener("install", (e) => {
   e.waitUntil(
@@ -24,35 +29,29 @@ self.addEventListener("install", (e) => {
 
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches
-      .match(event.request) // searching in the cache
-      .then((response) => {
-        if (response) {
-          // The request is in the cache
-          return response; // cache hit
-        } else {
-          // We need to go to the network
-          const fetchPromise = fetch(event.request)
-            .then((networkResponse) => {
-              return caches.open("car-game").then((cache) => {
-                cache.put(event.request, networkResponse.clone());
-                return networkResponse;
-              });
-            })
-            .catch((e) => {
-              console.error(e);
+    (async () => {
+      const cache = await caches.open("car-game");
 
-              return new Response(
-                "Network error and no cached data available. see the browser's console for more information",
-                {
-                  status: 503,
-                  statusText: "Service Unavailable.",
-                }
-              );
-            });
+      const cachedResponse = await cache.match(event.request);
 
-          return fetchPromise; // cache miss
-        }
-      })
+      if (cachedResponse) return cachedResponse;
+
+      const fetchPromise = fetch(event.request)
+        .then((networkResponse) => {
+          cache.put(event.request, networkResponse.clone());
+          return networkResponse;
+        })
+        .catch(() => {
+          return new Response(
+            "Network error and no cached data available. see the browser's console for more information",
+            {
+              status: 503,
+              statusText: "Service Unavailable.",
+            }
+          );
+        });
+
+      return fetchPromise; // cache miss
+    })()
   );
 });
